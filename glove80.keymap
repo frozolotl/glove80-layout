@@ -85,18 +85,6 @@
 #define POS_RH_C6R5 63
 #define POS_RH_C6R6 79
 
-#define COMBO_IDLE_MS 150
-#define COMBO_TIMEOUT_MS_SLOW 30
-#define COMBO_TIMEOUT_MS_FAST 15
-#define COMBO_MAIN_DEFINE(_name_, _bindings_, _key_positions_, _timeout_ms_) \
-    _name_ { \
-        bindings = _bindings_; \
-        key-positions = _key_positions_; \
-        timeout-ms = _timeout_ms_; \
-        require-prior-idle-ms = <COMBO_IDLE_MS>; \
-        layers = <0>; \
-    }
-
 / {
     behaviors {
         hml: hml {
@@ -165,64 +153,30 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        // LH_CxR3
-        COMBO_MAIN_DEFINE(combo_oe,     <&kp RA(O)>, <POS_LH_C2R3 POS_LH_C3R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_sz,     <&kp RA(S)>, <POS_LH_C3R3 POS_LH_C4R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_euro,   <&kp RA(E)>, <POS_LH_C4R3 POS_LH_C5R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        // LH_CxR3.5
-        COMBO_MAIN_DEFINE(combo_qmark,  <&kp QMARK>, <POS_LH_C2R4 POS_LH_C2R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_lt,     <&kp LT>,    <POS_LH_C3R4 POS_LH_C3R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_minus,  <&kp MINUS>, <POS_LH_C4R4 POS_LH_C4R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_dllr,   <&kp DLLR>,  <POS_LH_C5R4 POS_LH_C5R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        // LH_CxR4
-        COMBO_MAIN_DEFINE(combo_equals, <&kp EQUAL>, <POS_LH_C2R4 POS_LH_C1R4>, <COMBO_TIMEOUT_MS_FAST>);
-        COMBO_MAIN_DEFINE(combo_lpar,   <&kp LPAR>,  <POS_LH_C2R4 POS_LH_C3R4>, <COMBO_TIMEOUT_MS_FAST>);
-        COMBO_MAIN_DEFINE(combo_lbrc,   <&kp LBRC>,  <POS_LH_C3R4 POS_LH_C4R4>, <COMBO_TIMEOUT_MS_FAST>);
-        COMBO_MAIN_DEFINE(combo_ue,     <&kp RA(U)>, <POS_LH_C4R4 POS_LH_C5R4>, <COMBO_TIMEOUT_MS_FAST>);
-        // LH_CxR4.5
-        COMBO_MAIN_DEFINE(combo_excl,   <&kp EXCL>,  <POS_LH_C2R4 POS_LH_C2R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_lbkt,   <&kp LBKT>,  <POS_LH_C3R4 POS_LH_C3R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_prcnt,  <&kp PRCNT>, <POS_LH_C4R4 POS_LH_C4R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_caret,  <&kp CARET>, <POS_LH_C5R4 POS_LH_C5R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        // LH_CxR5
-        COMBO_MAIN_DEFINE(combo_hash,   <&kp HASH>,  <POS_LH_C2R5 POS_LH_C3R5>, <COMBO_TIMEOUT_MS_SLOW>);
-
-        // RH_CxR3
-        COMBO_MAIN_DEFINE(combo_amps,   <&kp AMPS>,  <POS_RH_C2R3 POS_RH_C3R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_bslh,   <&kp BSLH>,  <POS_RH_C3R3 POS_RH_C4R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        // RH_CxR3.5
-        COMBO_MAIN_DEFINE(combo_semi,   <&kp SEMI>,  <POS_RH_C2R4 POS_RH_C2R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_gt,     <&kp GT>,    <POS_RH_C3R4 POS_RH_C3R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_plus,   <&kp PLUS>,  <POS_RH_C4R4 POS_RH_C4R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_star,   <&kp STAR>,  <POS_RH_C5R4 POS_RH_C5R3>, <COMBO_TIMEOUT_MS_SLOW>);
-        // RH_CxR4
-        COMBO_MAIN_DEFINE(combo_colon,  <&kp COLON>, <POS_RH_C2R4 POS_RH_C1R4>, <COMBO_TIMEOUT_MS_FAST>);
-        COMBO_MAIN_DEFINE(combo_rpar,   <&kp RPAR>,  <POS_RH_C2R4 POS_RH_C3R4>, <COMBO_TIMEOUT_MS_FAST>);
-        COMBO_MAIN_DEFINE(combo_rbrc,   <&kp RBRC>,  <POS_RH_C3R4 POS_RH_C4R4>, <COMBO_TIMEOUT_MS_FAST>);
-        COMBO_MAIN_DEFINE(combo_ae,     <&kp RA(A)>, <POS_RH_C4R4 POS_RH_C5R4>, <COMBO_TIMEOUT_MS_FAST>);
-        // RH_CxR4.5
-        COMBO_MAIN_DEFINE(combo_dqt,    <&kp DQT>,   <POS_RH_C2R4 POS_RH_C2R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_rbkt,   <&kp RBKT>,  <POS_RH_C3R4 POS_RH_C3R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_grave,  <&kp GRAVE>, <POS_RH_C4R4 POS_RH_C4R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        COMBO_MAIN_DEFINE(combo_at,     <&kp AT>,    <POS_RH_C5R4 POS_RH_C5R5>, <COMBO_TIMEOUT_MS_SLOW>);
-        // RH_CxR5
-        COMBO_MAIN_DEFINE(combo_pipe,   <&kp PIPE>,  <POS_RH_C2R5 POS_RH_C3R5>, <COMBO_TIMEOUT_MS_SLOW>);
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         layer_main {
             bindings = <
-&none    &none        &none        &none         &none                                                                                     &none         &none         &none        &none        &mo 2
-&none    &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                              &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
-&kp TAB  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                             &kp G   &kp D         &kp L         &kp F        &kp B        &none
-&kp ESC  &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                           &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &none
-&none    &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &none        &none     &none      &none  &none    &none  &kp V   &kp K         &kp C         &kp P        &kp Z        &kp PG_UP
-&none    &none        &none        &none         &none                    &lt 1 SPACE  &kp BSPC  &kp DEL    &none  &kp RET  &kp T          &none         &none         &none        &none        &kp PG_DN
+&none    &none        &none        &none         &none                                                                                       &none         &none         &none        &none        &mo 3
+&none    &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                                &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
+&kp TAB  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                               &kp G   &kp D         &kp L         &kp F        &kp B        &none
+&kp ESC  &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                             &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &none
+&none    &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &none        &none     &none      &none  &none    &none    &kp V   &kp K         &kp C         &kp P        &kp Z        &kp PG_UP
+&none    &none        &none        &none         &none                    &lt 2 SPACE  &kp BSPC  &kp DEL    &none  &kp RET  &lt 1 T          &none         &none         &none        &none        &kp PG_DN
+            >;
+        };
+
+        layer_symbols {
+            bindings = <
+&trans  &trans          &trans          &trans           &trans                                                                                   &trans            &trans           &trans          &trans          &trans
+&trans  &trans          &trans          &trans           &trans            &trans                                                       &trans    &trans            &trans           &trans          &trans          &trans
+&trans  &kp RA(E)       &kp RA(S)       &kp RA(O)        &kp RA(U)         &kp MINUS                                                    &kp PLUS  &kp SEMI          &kp DQT          &kp GRAVE       &kp DLLR        &trans
+&trans  &hml LALT AMPS  &hml LGUI LBRC  &hml LCTRL LPAR  &hml LSHFT RA(A)  &kp QMARK                                                    &kp EXCL  &hmr LSHFT COLON  &hmr LCTRL RPAR  &hmr LGUI RBRC  &hmr LALT AMPS  &trans
+&trans  &kp TILDE       &kp HASH        &kp LBKT         &kp LT            &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &kp STAR  &kp GT            &kp RBKT         &kp AT          &kp CARET       &trans
+&trans  &trans          &trans          &trans           &trans                       &trans  &trans  &trans    &trans  &trans  &trans            &trans            &trans           &trans          &trans          &trans
             >;
         };
 
