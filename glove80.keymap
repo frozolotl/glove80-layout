@@ -167,6 +167,20 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        gaming_message_enter: gaming_message_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &to 6>;
+            label = "GAMING_MESSAGE_ENTER";
+        };
+
+        gaming_message_leave: gaming_message_leave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &to 5>;
+            label = "GAMING_MESSAGE_LEAVE";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -176,11 +190,11 @@
 
         layer_main {
             bindings = <
-&none      &none        &none        &none         &none                                                                                            &none         &none         &none        &none        &mo 5
+&none      &none        &none        &none         &none                                                                                            &none         &none         &none        &none        &mo 7
 &none      &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                                     &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
 &kp MINUS  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                                    &kp G   &kp D         &kp L         &kp F        &kp B        &none
 &kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                                  &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
-&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &none        &none     &none      &none  &none         &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
+&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &none        &to 5     &none      &none  &none         &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
 &none      &none        &none        &sl 4         &sl 3                    &lt 2 SPACE  &kp BSPC  &kp DEL    &none  &smart_shift  &lt 1 T          &none         &none         &none        &none        &none
             >;
         };
@@ -229,6 +243,28 @@
             >;
         };
 
+        layer_gaming {
+            bindings = <
+&trans                 &kp N      &kp H   &kp B   &kp J                                                                          &trans  &trans  &trans  &trans  &trans
+&kp N6                 &kp N5     &kp N2  &kp N3  &kp N1  &kp N4                                                         &trans  &trans  &trans  &trans  &trans  &trans
+&kp V                  &kp TAB    &kp C   &kp X   &kp Q   &kp G                                                          &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z                  &kp LSHFT  &kp A   &kp W   &kp D   &kp F                                                          &trans  &trans  &trans  &trans  &trans  &trans
+&gaming_message_enter  &kp LCTRL  &kp R   &kp S   &kp E   &kp T   &trans     &to 0     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE              &kp N7     &kp N6  &kp M   &trans          &kp SPACE  &kp LALT  &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_gaming_message {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                                   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &gaming_message_leave  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         layer_magic {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                       &none  &none  &none  &none  &bt BT_CLR_ALL
@@ -240,4 +276,6 @@
             >;
         };
     };
+
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
