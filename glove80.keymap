@@ -187,12 +187,12 @@
 
         layer_symbols {
             bindings = <
-&trans  &trans          &trans          &trans           &trans                                                                                   &trans            &trans           &trans          &trans          &trans
-&trans  &trans          &trans          &trans           &trans            &trans                                                       &trans    &trans            &trans           &trans          &trans          &trans
-&trans  &kp RA(E)       &kp RA(S)       &kp RA(O)        &kp RA(U)         &kp LBKT                                                     &kp RBKT  &kp SEMI          &kp DQT          &kp GRAVE       &kp DLLR        &trans
-&trans  &hml LALT AMPS  &hml LGUI LBRC  &hml LCTRL LPAR  &hml LSHFT RA(A)  &kp QMARK                                                    &kp EXCL  &hmr LSHFT COLON  &hmr LCTRL RPAR  &hmr LGUI RBRC  &hmr LALT AMPS  &trans
-&trans  &kp TILDE       &kp HASH        &kp EQUAL        &kp LT            &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &kp STAR  &kp GT            &kp PLUS         &kp AT          &kp CARET       &trans
-&trans  &trans          &trans          &trans           &trans                       &trans  &trans  &trans    &trans  &trans  &trans            &trans            &trans           &trans          &trans          &trans
+&trans  &trans           &trans          &trans           &trans                                                                                   &trans            &trans           &trans          &trans          &trans
+&trans  &trans           &trans          &trans           &trans            &trans                                                       &trans    &trans            &trans           &trans          &trans          &trans
+&trans  &kp RA(E)        &kp RA(S)       &kp RA(O)        &kp RA(U)         &kp LBKT                                                     &kp RBKT  &kp SEMI          &kp DQT          &kp GRAVE       &kp DLLR        &trans
+&trans  &hml LALT EQUAL  &hml LGUI LBRC  &hml LCTRL LPAR  &hml LSHFT RA(A)  &kp QMARK                                                    &kp EXCL  &hmr LSHFT COLON  &hmr LCTRL RPAR  &hmr LGUI RBRC  &hmr LALT AMPS  &trans
+&trans  &kp TILDE        &kp PRCNT       &kp HASH         &kp LT            &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &kp STAR  &kp GT            &kp PLUS         &kp AT          &kp CARET       &trans
+&trans  &trans           &trans          &trans           &trans                       &trans  &trans  &trans    &trans  &trans  &trans            &trans            &trans           &trans          &trans          &trans
             >;
         };
 
