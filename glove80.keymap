@@ -181,6 +181,20 @@
             bindings = <&kp RET &to 5>;
             label = "GAMING_MESSAGE_LEAVE";
         };
+
+        paamayim_nekudotayim: paamayim_nekudotayim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp DOT &kp DOT>,
+                <&macro_release>,
+                <&kp LSHFT>;
+
+            label = "::";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -194,19 +208,19 @@
 &none      &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                                     &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
 &kp MINUS  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                                    &kp G   &kp D         &kp L         &kp F        &kp B        &none
 &kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                                  &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
-&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &none        &to 5     &none      &none  &none         &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
+&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &kp RCTRL    &to 5     &none      &none  &none         &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
 &none      &none        &none        &sl 4         &sl 3                    &lt 2 SPACE  &kp BSPC  &kp DEL    &none  &smart_shift  &lt 1 T          &none         &none         &none        &none        &none
             >;
         };
 
         layer_symbols {
             bindings = <
-&trans  &trans           &trans          &trans           &trans                                                                                   &trans            &trans           &trans          &trans          &trans
-&trans  &trans           &trans          &trans           &trans            &trans                                                       &trans    &trans            &trans           &trans          &trans          &trans
-&trans  &kp RA(E)        &kp RA(S)       &kp RA(O)        &kp RA(U)         &kp LBKT                                                     &kp RBKT  &kp SEMI          &kp DQT          &kp GRAVE       &kp DLLR        &trans
-&trans  &hml LALT EQUAL  &hml LGUI LBRC  &hml LCTRL LPAR  &hml LSHFT RA(A)  &kp QMARK                                                    &kp EXCL  &hmr LSHFT COLON  &hmr LCTRL RPAR  &hmr LGUI RBRC  &hmr LALT AMPS  &trans
-&trans  &kp TILDE        &kp PRCNT       &kp HASH         &kp LT            &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &kp STAR  &kp GT            &kp PLUS         &kp AT          &kp CARET       &trans
-&trans  &trans           &trans          &trans           &trans                       &trans  &trans  &trans    &trans  &trans  &trans            &trans            &trans           &trans          &trans          &trans
+&trans  &trans           &trans          &trans                 &trans                                                                                   &trans            &trans           &trans          &trans          &trans
+&trans  &trans           &trans          &trans                 &trans           &trans                                                       &trans     &trans            &trans           &trans          &trans          &trans
+&trans  &kp RA(E)        &kp RA(S)       &kp RA(O)              &kp DQT          &kp PRCNT                                                    &kp RA(A)  &kp RA(U)         &kp LBKT         &kp RBKT        &kp DLLR        &trans
+&trans  &hml LALT EQUAL  &hml LGUI LPAR  &hml LCTRL RPAR        &hml LSHFT SEMI  &kp QMARK                                                    &kp EXCL   &hmr LSHFT COLON  &hmr LCTRL LBRC  &hmr LGUI RBRC  &hmr LALT HASH  &trans
+&trans  &kp PIPE         &kp AMPS        &paamayim_nekudotayim  &kp GRAVE        &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &kp STAR   &kp LT            &kp GT           &kp MINUS       &kp CARET       &trans
+&trans  &trans           &trans          &trans                 &kp TILDE                   &trans  &trans  &trans    &trans  &trans  &trans             &kp PLUS          &trans           &trans          &trans          &trans
             >;
         };
 
