@@ -22,6 +22,6 @@ Use the following keyboard configuration:
 - My older layouts for the [Ergodox EZ](https://configure.zsa.io/ergodox-ez/layouts/rPp0Q/latest/0) and the [ZSA Moonlander](https://configure.zsa.io/moonlander/layouts/yBdDx/latest/0).
 
 ## Visualization
-#![The keyboard layout's layers visualized](assets/keymap.svg)
+![The keyboard layout's layers visualized](assets/keymap.svg)
 
 
