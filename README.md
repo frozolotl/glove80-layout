@@ -32,6 +32,3 @@ Use the following keyboard configuration on your Linux computer:
 - Layout: `us`
 - Variant: `de_se_fi`
 - Options: `eurosign:e,compose:rctrl`
-
-### Building
-
