@@ -468,3 +468,105 @@ layers:
     - ''
     - ''
     - {t: ▽, type: trans}
+draw_config:
+  svg_style: |
+    /* inherit to force styles through use tags */
+    svg path {
+        fill: inherit;
+    }
+
+    /* font and background color specifications */
+    svg.keymap {
+        font-family: IBM Plex Mono,monospace;
+        font-size: 14px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        fill: #a0aec0;
+    }
+
+    /* default key styling */
+    rect.key {
+        fill: #2d3748;
+    }
+
+    rect.key, rect.combo {
+        stroke: #4a5568 2pt;
+    }
+
+    /* default key side styling, only used is draw_key_sides is set */
+    rect.side {
+        filter: brightness(90%);
+    }
+
+    /* color accent for combo boxes */
+    rect.combo, rect.combo-separate {
+        fill: #cdf;
+    }
+
+    /* color accent for held keys */
+    rect.held, rect.combo.held {
+        fill: #383346;
+    }
+
+    /* color accent for ghost (optional) keys */
+    rect.ghost, rect.combo.ghost {
+        stroke-dasharray: 4, 4;
+        stroke-width: 2;
+    }
+
+    text {
+        text-anchor: middle;
+        dominant-baseline: middle;
+    }
+
+    /* styling for layer labels */
+    text.label {
+        font-weight: bold;
+        text-anchor: start;
+        fill: #a0aec0;
+    }
+
+    /* styling for combo tap, and key hold/shifted label text */
+    text.combo, text.hold, text.shifted {
+        font-size: 11px;
+    }
+
+    text.hold {
+        text-anchor: middle;
+        dominant-baseline: auto;
+    }
+
+    text.shifted {
+        text-anchor: middle;
+        dominant-baseline: hanging;
+    }
+
+    /* styling for hold/shifted label text in combo box */
+    text.combo.hold, text.combo.shifted {
+        font-size: 8px;
+    }
+
+    /* lighter symbol for transparent keys */
+    text.trans {
+        fill: #718096;
+    }
+
+    /* styling for combo dendrons */
+    path.combo {
+        stroke-width: 1;
+        stroke: gray;
+        fill: none;
+    }
+
+    /* Start Tabler Icons Cleanup */
+    /* cannot use height/width with glyphs */
+    .icon-tabler > path {
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: 2;
+    }
+    /* hide tabler's default box */
+    .icon-tabler > path[stroke="none"][fill="none"] {
+        visibility: hidden;
+    }
+    /* End Tabler Icons Cleanup */
