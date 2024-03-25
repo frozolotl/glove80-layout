@@ -230,7 +230,7 @@
 &trans  &trans    &trans         &trans       &trans     &trans                                                    &trans  &trans      &trans     &trans    &trans    &trans
 &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans                                                    &trans  &trans      &trans     &trans    &trans    &trans
 &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans                                                    &trans  &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans
-&trans  &trans    &trans         &trans       &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans      &trans     &trans    &trans    &trans
+&trans  &trans    &trans         &trans       &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp RET     &trans     &trans    &trans    &trans
 &trans  &trans    &trans         &trans       &trans             &trans  &trans  &trans    &trans  &trans  &trans          &trans      &trans     &trans    &trans    &trans
             >;
         };
