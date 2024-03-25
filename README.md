@@ -8,12 +8,6 @@ This is [frozolotl](https://github.com/frozolotl)'s layout for the [Glove80](htt
 - Home-row mods without much finagling.
 - Long-term efficiency is prioritized over being easy to learn.
 
-## Requirements
-Use the following keyboard configuration:
-- Layout: `us`
-- Variant: `de_se_fi`
-- Options: `eurosign:e,compose:rctrl`
-
 ## Credits and Inspirations
 - Main Layer: [BEAKL T-t 04](http://ieants.cc/beakl/#beakl-t-t-04) by Xay Voong and (I presume) Ian Douglas.
 - Home row mods: [urob's zmk-config](https://github.com/urob/zmk-config) by Robert U.
@@ -24,4 +18,20 @@ Use the following keyboard configuration:
 ## Visualization
 ![The keyboard layout's layers visualized](assets/keymap.svg)
 
+## Usage
+### Requirements
+To build, install the following tools:
+- [`just`](https://github.com/casey/just)
+- [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer)
+- [`nix`](https://nixos.org/)
+- [`udisk`](https://wiki.archlinux.org/title/udisks)
+
+Then simply run `just` to build the config, install it, and redraw the keymap.
+
+Use the following keyboard configuration on your Linux computer:
+- Layout: `us`
+- Variant: `de_se_fi`
+- Options: `eurosign:e,compose:rctrl`
+
+### Building
 
