@@ -1,20 +1,25 @@
 layout: {qmk_keyboard: glove80}
 layers:
   main:
-  - ['', '', '', '', '', '', '', '', '', magic]
-  - ['', '3', '2', '1', '0', '4', '7', '6', '5', '9']
-  - ['8', '', '-', Q, H, O, U, ., G, D]
-  - - L
+  - ['', '', '', '', '', '', '', '', '', magic, '', '3']
+  - ['2', '1', '0', '4', '7', '6', '5', '9', '8', '', '-', Q]
+  - - H
+    - O
+    - U
+    - .
+    - G
+    - D
+    - L
     - F
     - B
     - ''
     - ESC
     - {t: Y, h: LALT}
-    - {t: I, h: LGUI}
+  - - {t: I, h: LGUI}
     - {t: E, h: LCTRL}
     - {t: A, h: LSHFT}
     - ','
-  - - M
+    - M
     - {t: S, h: LSHFT}
     - {t: R, h: LCTRL}
     - {t: N, h: LGUI}
@@ -22,16 +27,16 @@ layers:
     - TAB
     - ''
     - J
-    - ''''
+  - - ''''
     - /
-  - - _
+    - _
     - X
     - RCTRL
     - {t: gaming, h: toggle}
     - ''
     - ''
     - ''
-    - RET
+    - ⏎
     - V
     - K
   - - C
@@ -44,9 +49,9 @@ layers:
     - {t: fn, h: sticky}
     - {t: system, h: sticky}
     - {t: SPACE, h: nav}
-  - - BSPC
+    - BSPC
     - DEL
-    - ''
+  - - ''
     - {t: LSHFT, h: sticky, s: '&caps_word'}
     - {t: T, h: symbols}
     - ''
@@ -65,37 +70,37 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - RA(E)
-    - RA(S)
-    - RA(O)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - €
+  - - ß
+    - Ö
     - '"'
     - '%'
-    - RA(A)
-    - RA(U)
-  - - '['
+    - Ä
+    - Ü
+    - '['
     - ']'
     - $
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: '=', h: LALT}
-    - {t: (, h: LGUI}
+  - - {t: (, h: LGUI}
     - {t: ), h: LCTRL}
     - {t: ;, h: LSHFT}
     - '?'
-  - - '!'
+    - '!'
     - {t: ':', h: LSHFT}
     - {t: '{', h: LCTRL}
     - {t: '}', h: LGUI}
@@ -103,9 +108,9 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '|'
-    - '&'
+  - - '&'
     - '::'
-  - - '`'
+    - '`'
     - \
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -114,10 +119,10 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '*'
-    - <
+    - '<'
   - - '>'
     - '-'
-    - ^
+    - '^'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -125,9 +130,9 @@ layers:
     - {t: ▽, type: trans}
     - '~'
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - +
@@ -146,47 +151,47 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - HOME
-    - PAGE DOWN
+  - - PAGE DOWN
     - PAGE UP
     - END
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - ←
-    - ↓
-    - ↑
-    - →
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: RET, h: LSHFT}
+    - '←'
+  - - '↓'
+    - '↑'
+    - '→'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ⏎, h: LSHFT}
     - LCTRL
     - LGUI
     - LALT
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -206,9 +211,9 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -227,14 +232,6 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -247,27 +244,35 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - PREV
-    - NEXT
+  - - NEXT
     - PLAY PAUSE
     - MUTE
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -287,9 +292,9 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -308,14 +313,6 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -323,22 +320,30 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - F12
     - F11
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - F3
-    - F2
+  - - F2
     - F1
     - F10
     - F4
-  - - F7
+    - F7
     - F6
     - F5
     - F9
@@ -346,9 +351,9 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - F7
-    - F6
+  - - F6
     - F5
-  - - F9
+    - F9
     - F8
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -368,9 +373,9 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -389,9 +394,9 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - '6'
+    - '6'
     - '5'
-    - '2'
+  - - '2'
     - '3'
     - '1'
     - '4'
@@ -399,37 +404,15 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - V
     - TAB
-    - C
-    - X
-    - Q
-    - G
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - Z
-    - LSHFT
-    - A
-    - W
-    - D
-    - F
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - '&gaming_message_enter'
-    - LCTRL
-    - R
+  - [C, X, Q, G, ., U, I, O, ;, BSPC, Z, LSHFT]
+  - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', LCTRL]
+  - - R
     - S
-  - - E
+    - E
     - T
     - {t: ▽, type: trans}
     - {t: main, h: toggle}
@@ -437,11 +420,11 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - /
+    - J
+  - - '↓'
+    - K
+    - L
     - {t: ▽, type: trans}
     - '`'
     - '7'
@@ -449,180 +432,18 @@ layers:
     - M
     - {t: ▽, type: trans}
     - SPACE
-  - - LALT
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  gaming_message:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - LALT
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - '&gaming_message_leave'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  gaming_message_nav:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: '&gaming_message_leave', h: LSHFT}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - L
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   magic:
-  - - BT CLR
+  - - 'BT CLR'
     - ''
     - ''
     - ''
@@ -631,16 +452,15 @@ layers:
     - ''
     - ''
     - ''
-    - {t: BT CLR ALL, type: held}
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', RGB SPI, RGB SAI, RGB HUI, RGB BRI, RGB TOG, '', '']
-  - ['', '', '', '', '&bootloader', RGB SPD, RGB SAD, RGB HUD, RGB BRD, RGB EFF]
-  - ['', '', '', '', '', '&bootloader', '&sys_reset', '', '', '']
-  - ['', '', '&bt_2', '&bt_3', '', '', '', '', '', '']
-  - ['', '', '', '&sys_reset', '', '', '', '', '', '&bt_0']
-  - - '&bt_1'
-    - OUT USB
+    - {t: 'BT CLR ALL', type: held}
     - ''
+    - ''
+  - ['', '', '', '', '', '', '', '', '', '', '', RGB SPI]
+  - [RGB SAI, RGB HUI, RGB BRI, RGB TOG, '', '', '', '', '', '', 'BOOT', RGB SPD]
+  - [RGB SAD, RGB HUD, RGB BRD, RGB EFF, '', '', '', '', '', 'BOOT', 'RESET', '']
+  - ['', '', '', '', '&bt_2', '&bt_3', '', '', '', '', '', '']
+  - ['', '', '', 'RESET', '', '', '', '', '', '&bt_0', '&bt_1', OUT USB]
+  - - ''
     - ''
     - ''
     - ''
