@@ -384,8 +384,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   gaming:
-  - - {t: ▽, type: trans}
-    - N
+  - - N
+    - Z
     - H
     - B
     - J
@@ -408,7 +408,7 @@ layers:
     - {t: ▽, type: trans}
     - V
     - TAB
-  - [C, X, Q, G, ., U, I, O, ;, BSPC, Z, LSHFT]
+  - [C, X, Q, G, ., U, I, O, ;, BSPC, ESC, LSHFT]
   - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', LCTRL]
   - - R
     - S
