@@ -113,7 +113,7 @@
     behaviors {
         DEFINE_HM(hml, "HML", <&kp>, <&kp>, KEYS_LEFT_AND_THUMB);
         DEFINE_HM(hmr, "HMR", <&kp>, <&kp>, KEYS_RIGHT_AND_THUMB);
-        DEFINE_HM(hmr_gaming_message_leave, "HMR_GAMING_MESSAGE_LEAVE", <&kp>, <&gaming_message_leave>, KEYS_RIGHT_AND_THUMB);
+        DEFINE_HM(hmr_gx_msg_lv, "HMR_GX_MSG_LV", <&kp>, <&gx_msg_lv>, KEYS_RIGHT_AND_THUMB);
     
         smart_shift: smart_shift {
             compatible = "zmk,behavior-mod-morph";
@@ -161,18 +161,20 @@
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
 
-        gaming_message_enter: gaming_message_enter {
+        // Enter gaming_message and press key
+        gx_msg_er: gx_msg_er {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RET &to 6>;
-            label = "GAMING_MESSAGE_ENTER";
+            label = "GX_MSG_ER";
         };
 
-        gaming_message_leave: gaming_message_leave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RET &to 5>;
-            label = "GAMING_MESSAGE_LEAVE";
+        // Leave gaming_message and press key
+        gx_msg_lv: gx_msg_lv {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 5>;
+            label = "GX_MSG_LV";
         };
 
         paamayim_nekudotayim: paamayim_nekudotayim {
@@ -252,34 +254,34 @@
 
         layer_gaming {
             bindings = <
-&kp N                  &kp Z      &kp H   &kp B   &kp J                                                                             &trans    &trans    &trans     &trans    &trans
-&kp N6                 &kp N5     &kp N2  &kp N3  &kp N1  &kp N4                                                         &trans     &trans    &trans    &trans     &trans    &trans
-&kp V                  &kp TAB    &kp C   &kp X   &kp Q   &kp G                                                          &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
-&kp ESC                &kp LSHFT  &kp A   &kp W   &kp D   &kp F                                                          &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
-&gaming_message_enter  &kp LCTRL  &kp R   &kp S   &kp E   &kp T   &trans     &to 0     &trans    &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
-&kp GRAVE              &kp N7     &kp N6  &kp M   &trans          &kp SPACE  &kp LALT  &trans    &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
+&kp N       &kp Z      &kp H   &kp B   &kp J                                                                             &trans    &trans    &trans     &trans    &trans
+&kp N6      &kp N5     &kp N2  &kp N3  &kp N1  &kp N4                                                         &trans     &trans    &trans    &trans     &trans    &trans
+&kp V       &kp TAB    &kp C   &kp X   &kp Q   &kp G                                                          &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
+&kp ESC     &kp LSHFT  &kp A   &kp W   &kp D   &kp F                                                          &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
+&gx_msg_er  &kp LCTRL  &kp R   &kp S   &kp E   &kp T   &trans     &to 0     &trans    &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
+&kp GRAVE   &kp N7     &kp N6  &kp M   &trans          &kp SPACE  &kp LALT  &trans    &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
             >;
         };
 
         layer_gaming_message {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                                   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &gaming_message_leave  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans                                                                            &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans  &trans
+&gx_msg_lv ESC  &trans  &trans  &trans  &trans  &trans                                                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &gx_msg_lv RET  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         layer_gaming_message_nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                                    &trans                             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans                             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans                             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &hmr_gaming_message_leave LSHFT 0  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans                             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans                             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                                                    &trans                    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans                    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans                    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &hmr_gx_msg_lv LSHFT RET  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans                    &trans  &trans  &trans  &trans
             >;
         };
 
