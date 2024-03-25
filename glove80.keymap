@@ -85,6 +85,23 @@
 #define POS_RH_C6R5 63
 #define POS_RH_C6R6 79
 
+#define KEYS_LEFT_AND_THUMB <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 56 57 58 59 60 61 62 63 74 75 76 77 78 79 55 72 73 69 70 71 54 53 52>
+#define KEYS_RIGHT_AND_THUMB <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71 55 56 57 74 73 72>
+#define DEFINE_HM(_name_, _label_, _hold_, _tap_, _keys_) \
+    _name_: _name_ {                                   \
+        compatible = "zmk,behavior-hold-tap";          \
+        label = _label_;                               \
+        bindings = _hold_, _tap_;                      \
+        #binding-cells = <2>;                          \
+        tapping-term-ms = <250>;                       \
+        require-prior-idle-ms = <85>;                  \
+        flavor = "tap-preferred";                      \
+        hold-trigger-key-positions = _keys_;           \
+        hold-trigger-on-release;                       \
+        quick-tap-ms = <150>;                          \
+    }                                                  \
+
+
 &sk { quick-release; };
 
 &lt {
@@ -94,34 +111,10 @@
 
 / {
     behaviors {
-        hml: hml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            require-prior-idle-ms = <85>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 56 57 58 59 60 61 62 63 74 75 76 77 78 79 55 72 73 69 70 71 54 53 52>;
-            hold-trigger-on-release;
-            quick-tap-ms = <150>;
-        };
-
-        hmr: hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            require-prior-idle-ms = <85>;
-            flavor = "tap-preferred";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71 55 56 57 74 73 72>;
-            quick-tap-ms = <150>;
-        };
-
+        DEFINE_HM(hml, "HML", <&kp>, <&kp>, KEYS_LEFT_AND_THUMB);
+        DEFINE_HM(hmr, "HMR", <&kp>, <&kp>, KEYS_RIGHT_AND_THUMB);
+        DEFINE_HM(hmr_gaming_message_leave, "HMR_GAMING_MESSAGE_LEAVE", <&kp>, <&gaming_message_leave>, KEYS_RIGHT_AND_THUMB);
+    
         smart_shift: smart_shift {
             compatible = "zmk,behavior-mod-morph";
             label = "SMART_SHIFT";
@@ -204,7 +197,7 @@
 
         layer_main {
             bindings = <
-&none      &none        &none        &none         &none                                                                                            &none         &none         &none        &none        &mo 7
+&none      &none        &none        &none         &none                                                                                            &none         &none         &none        &none        &mo 8
 &none      &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                                     &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
 &kp MINUS  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                                    &kp G   &kp D         &kp L         &kp F        &kp B        &none
 &kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                                  &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
@@ -226,12 +219,12 @@
 
         layer_nav {
             bindings = <
-&trans  &trans    &trans         &trans       &trans                                                                       &trans      &trans     &trans    &trans    &trans
-&trans  &trans    &trans         &trans       &trans     &trans                                                    &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans                                                    &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans                                                    &trans  &kp LSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans
-&trans  &trans    &trans         &trans       &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp RET     &trans     &trans    &trans    &trans
-&trans  &trans    &trans         &trans       &trans             &trans  &trans  &trans    &trans  &trans  &trans          &trans      &trans     &trans    &trans    &trans
+&trans  &trans    &trans         &trans       &trans                                                                       &trans          &trans     &trans    &trans    &trans
+&trans  &trans    &trans         &trans       &trans     &trans                                                    &trans  &trans          &trans     &trans    &trans    &trans
+&trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans                                                    &trans  &trans          &trans     &trans    &trans    &trans
+&trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans                                                    &trans  &hmr LSHFT RET  &kp LCTRL  &kp LGUI  &kp LALT  &trans
+&trans  &trans    &trans         &trans       &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans          &trans     &trans    &trans    &trans
+&trans  &trans    &trans         &trans       &trans             &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans     &trans    &trans    &trans
             >;
         };
 
@@ -279,6 +272,17 @@
             >;
         };
 
+        layer_gaming_message_nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                    &trans                             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans                             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans                             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &hmr_gaming_message_leave LSHFT 0  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans                             &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans                             &trans  &trans  &trans  &trans
+            >;
+        };
+
         layer_magic {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                       &none  &none  &none  &none  &bt BT_CLR_ALL
@@ -291,5 +295,12 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        cond_gaming_message_nav {
+            if-layers = <6 2>;
+            then-layer = <7>;
+        };
+    };
 };
