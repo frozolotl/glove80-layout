@@ -10,4 +10,5 @@ install:
     cp result/glove80.uf2 /run/media/$USER/GLV80RHBOOT/CURRENT.UF2
 
 draw:
-    keymap draw assets/keymap.yaml > assets/keymap.svg
+    keymap draw assets/keymap.yaml | rsvg-convert -o assets/keymap.png -b '#eee' -
+

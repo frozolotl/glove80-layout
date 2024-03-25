@@ -16,7 +16,7 @@ This is [frozolotl](https://github.com/frozolotl)'s layout for the [Glove80](htt
 - My older layouts for the [Ergodox EZ](https://configure.zsa.io/ergodox-ez/layouts/rPp0Q/latest/0) and the [ZSA Moonlander](https://configure.zsa.io/moonlander/layouts/yBdDx/latest/0).
 
 ## Visualization
-![The keyboard layout's layers visualized](assets/keymap.svg)
+![The keyboard layout's layers visualized](assets/keymap.png)
 
 ## Usage
 ### Requirements
@@ -24,6 +24,7 @@ To build, install the following tools:
 - [`just`](https://github.com/casey/just)
 - [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer)
 - [`nix`](https://nixos.org/)
+- [`librsvg`](https://gitlab.gnome.org/GNOME/librsvg)
 - [`udisk`](https://wiki.archlinux.org/title/udisks)
 
 Then simply run `just` to build the config, install it, and redraw the keymap.
