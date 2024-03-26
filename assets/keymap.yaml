@@ -481,7 +481,7 @@ draw_config:
         font-size: 14px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
-        fill: #a0aec0;
+        fill: #cbd5e0;
     }
 
     /* default key styling */
