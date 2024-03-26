@@ -444,6 +444,7 @@ layers:
     - {t: ▽, type: trans}
   magic:
   - - 'BT CLR'
+    - 'CLR ALL'
     - ''
     - ''
     - ''
@@ -451,8 +452,7 @@ layers:
     - ''
     - ''
     - ''
-    - ''
-    - {t: 'BT CLR ALL', type: held}
+    - {type: held}
     - ''
     - ''
   - ['', '', '', '', '', '', '', '', '', '', '', RGB SPI]
@@ -478,7 +478,7 @@ draw_config:
     /* font and background color specifications */
     svg.keymap {
         font-family: IBM Plex Mono,monospace;
-        font-size: 14px;
+        font-size: 16px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: #cbd5e0;
@@ -528,7 +528,7 @@ draw_config:
 
     /* styling for combo tap, and key hold/shifted label text */
     text.combo, text.hold, text.shifted {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     text.hold {
