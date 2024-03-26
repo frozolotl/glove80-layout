@@ -184,7 +184,7 @@
                 <&macro_press>,
                 <&kp LEFT_SHIFT>,
                 <&macro_tap>,
-                <&kp DOT &kp DOT>,
+                <&kp SEMI &kp SEMI>,
                 <&macro_release>,
                 <&kp LSHFT>;
 
