@@ -430,10 +430,10 @@ layers:
     - '7'
     - '6'
     - M
-    - {t: ▽, type: trans}
+    - system
     - SPACE
     - LALT
-    - {t: ▽, type: trans}
+    - fn
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - L
