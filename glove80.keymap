@@ -256,8 +256,8 @@
             bindings = <
 &kp N       &kp Z      &kp H   &kp B   &kp J                                                                             &trans    &trans    &trans     &trans    &trans
 &kp N6      &kp N5     &kp N2  &kp N3  &kp N1  &kp N4                                                         &trans     &trans    &trans    &trans     &trans    &trans
-&kp V       &kp TAB    &kp C   &kp X   &kp Q   &kp G                                                          &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
-&kp ESC     &kp LSHFT  &kp A   &kp W   &kp D   &kp F                                                          &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
+&kp V       &kp ESC    &kp C   &kp X   &kp Q   &kp G                                                          &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
+&kp TAB     &kp LSHFT  &kp A   &kp W   &kp D   &kp F                                                          &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
 &gx_msg_er  &kp LCTRL  &kp R   &kp S   &kp E   &kp T   &trans     &to 0     &trans    &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
 &kp GRAVE   &kp N7     &kp N6  &kp M   &mo 3           &kp SPACE  &kp LALT  &mo 4     &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
             >;

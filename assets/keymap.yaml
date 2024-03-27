@@ -407,8 +407,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - V
-    - TAB
-  - [C, X, Q, G, ., U, I, O, ;, BSPC, ESC, LSHFT]
+    - ESC
+  - [C, X, Q, G, ., U, I, O, ;, BSPC, TAB, LSHFT]
   - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', LCTRL]
   - - R
     - S
