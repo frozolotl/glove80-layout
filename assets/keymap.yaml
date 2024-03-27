@@ -394,7 +394,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '6'
+    - '8'
     - '5'
   - - '2'
     - '3'
@@ -408,8 +408,8 @@ layers:
     - {t: ▽, type: trans}
     - V
     - ESC
-  - [C, X, Q, G, ., U, I, O, ;, BSPC, TAB, LSHFT]
-  - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', LCTRL]
+  - [C, X, Q, G, ., U, I, O, ;, BSPC, LCTRL, LSHFT]
+  - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', TAB]
   - - R
     - S
     - E
