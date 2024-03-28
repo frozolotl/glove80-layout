@@ -4,6 +4,16 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define LAYER_MAIN 0
+#define LAYER_SYMBOLS 1
+#define LAYER_NAV 2
+#define LAYER_SYS 3
+#define LAYER_FN 4
+#define LAYER_GAMING 5
+#define LAYER_GAMING_MESSAGE 6
+#define LAYER_GAMING_MESSAGE_NAV 7
+#define LAYER_MAGIC 8
+
 #define KEYS_LEFT_AND_THUMB <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 56 57 58 59 60 61 62 63 74 75 76 77 78 79 55 72 73 69 70 71 54 53 52>
 #define KEYS_RIGHT_AND_THUMB <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71 55 56 57 74 73 72>
 #define DEFINE_HM(_name_, _label_, _hold_, _tap_, _keys_) \
@@ -19,7 +29,6 @@
         hold-trigger-on-release;                       \
         quick-tap-ms = <150>;                          \
     }                                                  \
-
 
 &sk { quick-release; };
 
@@ -84,7 +93,7 @@
         gx_msg_er: gx_msg_er {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &to 6>;
+            bindings = <&kp RET &to LAYER_GAMING_MESSAGE>;
             label = "GX_MSG_ER";
         };
 
@@ -92,7 +101,7 @@
         gx_msg_lv: gx_msg_lv {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 5>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to LAYER_GAMING>;
             label = "GX_MSG_LV";
         };
 
@@ -118,12 +127,12 @@
 
         layer_main {
             bindings = <
-&none      &none        &none        &none         &none                                                                                            &none         &none         &none        &none        &mo 8
-&none      &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                                     &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
-&kp MINUS  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                                    &kp G   &kp D         &kp L         &kp F        &kp B        &none
-&kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                                  &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
-&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &kp RCTRL    &to 5         &none      &none  &none     &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
-&none      &none        &none        &sl 4         &sl 3                    &lt 2 SPACE  &smart_shift  &kp DEL    &none  &kp BSPC  &lt 1 T          &none         &none         &none        &none        &none
+&none      &none        &none        &none         &none                                                                                                                        &none         &none         &none        &none        &mo LAYER_MAGIC
+&none      &kp N3       &kp N2       &kp N1        &kp N0            &kp N4                                                                                             &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
+&kp MINUS  &kp Q        &kp H        &kp O         &kp U             &kp DOT                                                                                            &kp G   &kp D         &kp L         &kp F        &kp B        &none
+&kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A      &kp COMMA                                                                                          &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
+&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER         &kp X      &kp RCTRL            &to LAYER_GAMING  &none      &none  &none     &kp RET              &kp V   &kp K         &kp C         &kp P        &kp Z        &none
+&none      &none        &none        &sl LAYER_FN  &sl LAYER_SYSTEM             &lt LAYER_NAV SPACE  &smart_shift      &kp DEL    &none  &kp BSPC  &lt LAYER_SYMBOLS T          &none         &none         &none        &none        &none
             >;
         };
 
@@ -173,12 +182,12 @@
 
         layer_gaming {
             bindings = <
-&kp N       &kp Z      &kp H   &kp B   &kp J                                                                             &trans    &trans    &trans     &trans    &trans
-&kp N8      &kp N5     &kp N2  &kp N3  &kp N1  &kp N4                                                         &trans     &trans    &trans    &trans     &trans    &trans
-&kp V       &kp ESC    &kp C   &kp X   &kp Q   &kp G                                                          &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
-&kp LCTRL   &kp LSHFT  &kp A   &kp W   &kp D   &kp F                                                          &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
-&gx_msg_er  &kp TAB    &kp R   &kp S   &kp E   &kp T   &trans     &to 0     &trans    &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
-&kp GRAVE   &kp N7     &kp N6  &kp M   &mo 3           &kp SPACE  &kp LALT  &mo 4     &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
+&kp N       &kp Z      &kp H   &kp B   &kp J                                                                                         &trans    &trans    &trans     &trans    &trans
+&kp N8      &kp N5     &kp N2  &kp N3  &kp N1            &kp N4                                                                      &trans     &trans    &trans    &trans     &trans    &trans
+&kp V       &kp ESC    &kp C   &kp X   &kp Q             &kp G                                                                       &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
+&kp LCTRL   &kp LSHFT  &kp A   &kp W   &kp D             &kp F                                                                       &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
+&gx_msg_er  &kp TAB    &kp R   &kp S   &kp E             &kp T   &trans     &to LAYER_MAIN  &trans           &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
+&kp GRAVE   &kp N7     &kp N6  &kp M   &mo LAYER_SYSTEM          &kp SPACE  &kp LALT        &mo LAYER_FN     &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
             >;
         };
 
@@ -221,7 +230,7 @@
 
         cond_gaming_message_nav {
             if-layers = <6 2>;
-            then-layer = <7>;
+            then-layer = <LAYER_GAMING_MESSAGE_NAV>;
         };
     };
 };
