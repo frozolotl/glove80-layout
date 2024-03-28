@@ -49,10 +49,10 @@ layers:
     - {t: fn, h: sticky}
     - {t: system, h: sticky}
     - {t: SPACE, h: nav}
-    - BSPC
+    - {t: LSHFT, h: sticky, s: '&caps_word'}
     - DEL
   - - ''
-    - {t: LSHFT, h: sticky, s: '&caps_word'}
+    - BSPC
     - {t: T, h: symbols}
     - ''
     - ''

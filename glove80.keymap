@@ -122,8 +122,8 @@
 &none      &kp N3       &kp N2       &kp N1        &kp N0        &kp N4                                                                     &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
 &kp MINUS  &kp Q        &kp H        &kp O         &kp U         &kp DOT                                                                    &kp G   &kp D         &kp L         &kp F        &kp B        &none
 &kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A  &kp COMMA                                                                  &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
-&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &kp RCTRL    &to 5     &none      &none  &none         &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
-&none      &none        &none        &sl 4         &sl 3                    &lt 2 SPACE  &kp BSPC  &kp DEL    &none  &smart_shift  &lt 1 T          &none         &none         &none        &none        &none
+&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER     &kp X      &kp RCTRL    &to 5         &none      &none  &none     &kp RET  &kp V   &kp K         &kp C         &kp P        &kp Z        &none
+&none      &none        &none        &sl 4         &sl 3                    &lt 2 SPACE  &smart_shift  &kp DEL    &none  &kp BSPC  &lt 1 T          &none         &none         &none        &none        &none
             >;
         };
 
