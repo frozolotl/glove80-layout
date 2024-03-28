@@ -83,7 +83,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - €
+    - '@'
   - - ß
     - Ö
     - '"'
@@ -92,7 +92,7 @@ layers:
     - Ü
     - '['
     - ']'
-    - $
+    - '$'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: '=', h: LALT}
@@ -127,7 +127,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - '€'
     - '~'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}

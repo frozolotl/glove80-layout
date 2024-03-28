@@ -131,10 +131,10 @@
             bindings = <
 &trans  &trans           &trans          &trans                 &trans                                                                                   &trans            &trans           &trans          &trans          &trans
 &trans  &trans           &trans          &trans                 &trans           &trans                                                       &trans     &trans            &trans           &trans          &trans          &trans
-&trans  &kp RA(E)        &kp RA(S)       &kp RA(O)              &kp DQT          &kp PRCNT                                                    &kp RA(A)  &kp RA(U)         &kp LBKT         &kp RBKT        &kp DLLR        &trans
+&trans  &kp AT           &kp RA(S)       &kp RA(O)              &kp DQT          &kp PRCNT                                                    &kp RA(A)  &kp RA(U)         &kp LBKT         &kp RBKT        &kp DLLR        &trans
 &trans  &hml LALT EQUAL  &hml LGUI LPAR  &hml LCTRL RPAR        &hml LSHFT SEMI  &kp QMARK                                                    &kp EXCL   &hmr LSHFT COLON  &hmr LCTRL LBRC  &hmr LGUI RBRC  &hmr LALT HASH  &trans
 &trans  &kp PIPE         &kp AMPS        &paamayim_nekudotayim  &kp GRAVE        &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &kp STAR   &kp LT            &kp GT           &kp MINUS       &kp CARET       &trans
-&trans  &trans           &trans          &trans                 &kp TILDE                   &trans  &trans  &trans    &trans  &trans  &trans             &kp PLUS          &trans           &trans          &trans          &trans
+&trans  &trans           &trans          &kp RA(E)              &kp TILDE                   &trans  &trans  &trans    &trans  &trans  &trans             &kp PLUS          &trans           &trans          &trans          &trans
             >;
         };
 
