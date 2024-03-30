@@ -25,7 +25,7 @@ To build, install the following tools:
 - [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer)
 - [`nix`](https://nixos.org/)
 - [`librsvg`](https://gitlab.gnome.org/GNOME/librsvg)
-- [`udisk`](https://wiki.archlinux.org/title/udisks)
+- [`udisks`](https://wiki.archlinux.org/title/udisks)
 
 Then simply run `just` to build the config, install it, and redraw the keymap.
 
