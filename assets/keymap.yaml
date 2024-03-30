@@ -140,6 +140,65 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+  gaming:
+  - - N
+    - Z
+    - H
+    - B
+    - J
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '8'
+    - '5'
+  - - '2'
+    - '3'
+    - '1'
+    - '4'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - V
+    - ESC
+  - [C, X, Q, G, ., U, I, O, ;, BSPC, LCTRL, LSHFT]
+  - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', TAB]
+  - - R
+    - S
+    - E
+    - T
+    - {t: ▽, type: trans}
+    - {t: main, h: toggle}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - /
+    - J
+  - - '↓'
+    - K
+    - L
+    - {t: ▽, type: trans}
+    - '`'
+    - '7'
+    - '6'
+    - M
+    - system
+    - SPACE
+    - LALT
+    - fn
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - L
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   nav:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -378,65 +437,6 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  gaming:
-  - - N
-    - Z
-    - H
-    - B
-    - J
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - '8'
-    - '5'
-  - - '2'
-    - '3'
-    - '1'
-    - '4'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - V
-    - ESC
-  - [C, X, Q, G, ., U, I, O, ;, BSPC, LCTRL, LSHFT]
-  - [A, W, D, F, ',', '←', '↑', '→', P, ENTER, '⏎ MSG', TAB]
-  - - R
-    - S
-    - E
-    - T
-    - {t: ▽, type: trans}
-    - {t: main, h: toggle}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - /
-    - J
-  - - '↓'
-    - K
-    - L
-    - {t: ▽, type: trans}
-    - '`'
-    - '7'
-    - '6'
-    - M
-    - system
-    - SPACE
-    - LALT
-    - fn
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - L
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
