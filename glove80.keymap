@@ -23,8 +23,8 @@
         bindings = _hold_, _tap_;                      \
         #binding-cells = <2>;                          \
         tapping-term-ms = <250>;                       \
-        require-prior-idle-ms = <85>;                  \
-        flavor = "tap-preferred";                      \
+        require-prior-idle-ms = <75>;                  \
+        flavor = "balanced";                           \
         hold-trigger-key-positions = _keys_;           \
         hold-trigger-on-release;                       \
         quick-tap-ms = <150>;                          \
@@ -34,7 +34,7 @@
 
 &lt {
     quick-tap-ms = <150>;
-    require-prior-idle-ms = <85>;
+    require-prior-idle-ms = <75>;
 };
 
 / {
