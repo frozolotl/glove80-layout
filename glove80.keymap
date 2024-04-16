@@ -22,9 +22,9 @@
         label = _label_;                               \
         bindings = _hold_, _tap_;                      \
         #binding-cells = <2>;                          \
-        tapping-term-ms = <250>;                       \
+        tapping-term-ms = <200>;                       \
         require-prior-idle-ms = <80>;                  \
-        flavor = "balanced";                           \
+        flavor = "tap-preferred";                      \
         hold-trigger-key-positions = _keys_;           \
         hold-trigger-on-release;                       \
         quick-tap-ms = <150>;                          \
@@ -33,8 +33,8 @@
 &sk { quick-release; };
 
 &lt {
-    quick-tap-ms = <150>;
     require-prior-idle-ms = <80>;
+    quick-tap-ms = <150>;
 };
 
 / {
