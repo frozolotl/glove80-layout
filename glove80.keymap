@@ -28,7 +28,7 @@
         hold-trigger-key-positions = _keys_;           \
         hold-trigger-on-release;                       \
         quick-tap-ms = <150>;                          \
-    }                                                  \
+    }
 
 &sk { quick-release; };
 
