@@ -36,6 +36,15 @@
               };
             in
             firmware.combine_uf2 glove80Left glove80Right "glove80";
+
+          devShells.default = pkgs.mkShellNoCC {
+            name = "glove80-layout";
+
+            packages = with pkgs; [
+              librsvg
+              just
+            ];
+          };
         };
     };
 }

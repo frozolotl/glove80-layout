@@ -1,4 +1,4 @@
-default: build install-left install-right draw
+default: build install-left install-right
 
 build:
     nix --experimental-features 'nix-command flakes' build

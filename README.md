@@ -21,13 +21,13 @@ This is [frozolotl](https://github.com/frozolotl)'s layout for the [Glove80](htt
 ## Usage
 ### Requirements
 To build, install the following tools:
-- [`just`](https://github.com/casey/just)
-- [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer)
 - [`nix`](https://nixos.org/)
-- [`librsvg`](https://gitlab.gnome.org/GNOME/librsvg)
-- [`udisks`](https://wiki.archlinux.org/title/udisks)
+- [`just`](https://github.com/casey/just) (optional, for more convenient commands)
+- [`udisks`](https://wiki.archlinux.org/title/udisks) (optional, for `just install`)
+- [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer) (optional, for `just draw`)
+- [`librsvg`](https://gitlab.gnome.org/GNOME/librsvg) (optional, `for just draw`)
 
-Then simply run `just` to build the config, install it, and redraw the keymap.
+Then simply run `just` to build the config and install the keymap.
 
 Use the following keyboard configuration on your Linux computer:
 - Layout: `us`
