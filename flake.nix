@@ -43,6 +43,8 @@
             packages = with pkgs; [
               librsvg
               just
+              uv
+              python3
             ];
           };
         };

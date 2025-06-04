@@ -24,7 +24,6 @@ To build, install the following tools:
 - [`nix`](https://nixos.org/)
 - [`just`](https://github.com/casey/just) (optional, for more convenient commands)
 - [`udisks`](https://wiki.archlinux.org/title/udisks) (optional, for `just install`)
-- [`keymap-drawer`](https://github.com/caksoylar/keymap-drawer) (optional, for `just draw`)
 - [`librsvg`](https://gitlab.gnome.org/GNOME/librsvg) (optional, `for just draw`)
 
 Then simply run `just` to build the config and install the keymap.
