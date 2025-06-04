@@ -138,12 +138,12 @@
 
         layer_left {
             bindings = <
-&none      &none        &none        &none         &none                                                                                                          &none         &none         &none        &none        &none
-&none      &kp N8       &kp N9       &kp N5        &kp N6            &kp N7                                                                               &none   &none         &none         &none        &none        &none
-&none      &kp B        &kp F        &kp L         &kp D             &kp G                                                                                &none   &none         &none         &none        &none        &none
-&kp TAB    &hml LALT W  &hml LGUI N  &hml LCTRL R  &hml LSHFT S      &kp M                                                                                &none   &none         &none         &none        &none        &none
-&none      &hml LALT Z  &hml LGUI P  &hml LCTRL C  &hml LSHFT K      &kp V   &kp RET          &trans         &to LAYER_GAMING    &none  &none     &none   &none   &none         &none         &none        &none        &none
-&none      &none        &none        &sl LAYER_FN  &sl LAYER_SYSTEM          &lt LAYER_NAV T  &smart_shift   &kp BSPC            &none  &kp BSPC  &none           &none         &none         &none        &none        &none
+&none    &none        &none        &none         &none                                                                                                    &none  &none  &none  &none  &none
+&none    &kp N8       &kp N9       &kp N5        &kp N6            &kp N7                                                                          &none  &none  &none  &none  &none  &none
+&none    &kp B        &kp F        &kp L         &kp D             &kp G                                                                           &none  &none  &none  &none  &none  &none
+&kp TAB  &hml LALT W  &hml LGUI N  &hml LCTRL R  &hml LSHFT S      &kp M                                                                           &none  &none  &none  &none  &none  &none
+&none    &hml LALT Z  &hml LGUI P  &hml LCTRL C  &hml LSHFT K      &kp V  &kp RET          &trans         &to LAYER_GAMING    &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none    &none        &none        &sl LAYER_FN  &sl LAYER_SYSTEM         &lt LAYER_NAV T  &smart_shift   &kp BSPC            &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
@@ -160,12 +160,12 @@
 
         layer_gaming {
             bindings = <
-&kp N       &kp Z      &kp H   &kp B   &kp J                                                                                         &trans    &trans    &trans     &trans    &trans
-&kp N8      &kp N5     &kp N2  &kp N3  &kp N1            &kp N4                                                                      &trans     &trans    &trans    &trans     &trans    &trans
-&kp V       &kp ESC    &kp C   &kp X   &kp Q             &kp G                                                                       &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
-&kp LCTRL   &kp LSHFT  &kp A   &kp W   &kp D             &kp F                                                                       &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
-&gx_msg_er  &kp TAB    &kp R   &kp S   &kp E             &kp T   &trans     &to LAYER_MAIN  &trans           &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
-&kp GRAVE   &kp N7     &kp N6  &kp M   &mo LAYER_SYSTEM          &kp SPACE  &kp LALT        &mo LAYER_FN     &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
+&kp N       &kp Z      &kp H   &kp B   &kp J                                                                                               &trans    &trans    &trans     &trans    &trans
+&kp N8      &kp N5     &kp N2  &kp N3  &kp N1            &kp N4                                                                 &trans     &trans    &trans    &trans     &trans    &trans
+&kp V       &kp ESC    &kp C   &kp X   &kp Q             &kp G                                                                  &kp DOT    &kp U     &kp I     &kp O      &kp SEMI  &kp BSPC
+&kp LCTRL   &kp LSHFT  &kp A   &kp W   &kp D             &kp F                                                                  &kp COMMA  &kp LEFT  &kp UP    &kp RIGHT  &kp P     &kp ENTER
+&gx_msg_er  &kp TAB    &kp R   &kp S   &kp E             &kp T   &trans     &trans    &to LAYER_MAIN    &trans  &trans  &trans  &kp FSLH   &kp J     &kp DOWN  &kp K      &kp L     &trans
+&kp GRAVE   &kp N7     &kp N6  &kp M   &mo LAYER_SYSTEM          &kp SPACE  &kp LALT  &mo LAYER_FN      &trans  &trans  &kp L              &trans    &trans    &trans     &trans    &trans
             >;
         };
 
