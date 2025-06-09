@@ -1,19 +1,19 @@
 layout: {qmk_keyboard: glove80}
 layers:
   main:
-  - ['',  '',              '',              '',                 '',                                                                                                                                                 '',               '',               '',              '',              magic]
-  - ['',  '3',             '2',             '1',                '0',                    '4',                                                                                                                   '7', '6',              '5',              '9',             '8',             ''   ]
-  - ['-', Q,               H,               O,                  U,                      '.',                                                                                                                   G,   D,                L,                F,               B,               ''   ]
-  - [ESC, {t: Y, h: LALT}, {t: I, h: LGUI}, {t: E, h: LCTRL},   {t: A, h: LSHFT},       ',',                                                                                                                   M,   {t: S, h: LSHFT}, {t: R, h: LCTRL}, {t: N, h: LGUI}, {t: W, h: LALT}, TAB  ]
-  - ['',  J,               '''',            '/',                '_',                    X,   RCTRL,              {t: left, h: sticky},                   {t: gaming, h: toggle}, '', '',   '⏎',                V,   K,                C,                P,               Z,               ''   ]
-  - ['',  '',              '',              {t: fn, h: sticky}, {t: system, h: sticky},      {t: SPACE, h: nav}, {t: LSHFT, h: sticky, s: '&caps_word'}, DEL,                    '', BSPC, {t: T, h: symbols},      '',               '',               '',              '',              ''   ]
+  - ['',  '',              '',                 '',                 '',                                                                                                                                                 '',               '',               '',              '',              magic]
+  - ['',  '3',             '2',                '1',                '0',                    '4',                                                                                                                   '7', '6',              '5',              '9',             '8',             ''   ]
+  - ['-', Q,               H,                  O,                  U,                      '.',                                                                                                                   G,   D,                L,                F,               B,               ''   ]
+  - [ESC, {t: Y, h: LALT}, {t: I, h: LGUI},    {t: E, h: LCTRL},   {t: A, h: LSHFT},       ',',                                                                                                                   M,   {t: S, h: LSHFT}, {t: R, h: LCTRL}, {t: N, h: LGUI}, {t: W, h: LALT}, TAB  ]
+  - ['',  {t: J, h: LGUI}, {t: '''', h: LALT}, {t: '/', h: LSHFT}, {t: '_', h: LSHFT},     X,   RCTRL,              {t: left, h: sticky},                   {t: gaming, h: toggle}, '', '',   '⏎',                V,   K,                C,                P,               Z,               ''   ]
+  - ['',  '',              '',                 {t: fn, h: sticky}, {t: system, h: sticky},      {t: SPACE, h: nav}, {t: LSHFT, h: sticky, s: '&caps_word'}, DEL,                    '', BSPC, {t: T, h: symbols},      '',               '',               '',              '',              ''   ]
 
   left:
   - ['',  '',              '',              '',                 '',                                                                                                                          '', '', '', '', '']
   - ['',  '8',             '9',             '5',                '6',                    '7',                                                                                             '', '', '', '', '', '']
   - ['',  B,               F,               L,                  D,                      G,                                                                                               '', '', '', '', '', '']
   - [TAB, {t: W, h: LALT}, {t: N, h: LGUI}, {t: R, h: LCTRL},   {t: S, h: LSHFT},       M,                                                                                               '', '', '', '', '', '']
-  - ['',  {t: Z, h: LALT}, {t: P, h: LGUI}, {t: C, h: LCTRL},   {t: K, h: LSHFT},       V,   RET,            {t: '▽', type: trans},                  {t: gaming, h: toggle}, '', '', '', '', '', '', '', '', '']
+  - ['',  {t: Z, h: LGUI}, {t: P, h: LALT}, {t: C, h: LSHFT},   {t: K, h: LCTRL},       V,   RET,            {t: '▽', type: trans},                  {t: gaming, h: toggle}, '', '', '', '', '', '', '', '', '']
   - ['',  '',              '',              {t: fn, h: sticky}, {t: system, h: sticky},      {t: T, h: nav}, {t: LSHFT, h: sticky, s: '&caps_word'}, BSPC,                   '', '', '',     '', '', '', '', '']
 
   symbols:

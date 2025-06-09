@@ -127,12 +127,12 @@
 
         layer_main {
             bindings = <
-&none      &none        &none        &none         &none                                                                                                                               &none         &none         &none        &none        &mo LAYER_MAGIC
-&none      &kp N3       &kp N2       &kp N1        &kp N0            &kp N4                                                                                                    &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
-&kp MINUS  &kp Q        &kp H        &kp O         &kp U             &kp DOT                                                                                                   &kp G   &kp D         &kp L         &kp F        &kp B        &none
-&kp ESC    &hml LALT Y  &hml LGUI I  &hml LCTRL E  &hml LSHFT A      &kp COMMA                                                                                                 &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
-&none      &kp J        &kp SQT      &kp SLASH     &kp UNDER         &kp X      &kp RCTRL            &sl LAYER_LEFT  &to LAYER_GAMING    &none  &none     &kp RET              &kp V   &kp K         &kp C         &kp P        &kp Z        &none
-&none      &none        &none        &sl LAYER_FN  &sl LAYER_SYSTEM             &lt LAYER_NAV SPACE  &smart_shift    &kp DEL             &none  &kp BSPC  &lt LAYER_SYMBOLS T          &none         &none         &none        &none        &none
+&none      &none        &none          &none             &none                                                                                                                               &none         &none         &none        &none        &mo LAYER_MAGIC
+&none      &kp N3       &kp N2         &kp N1            &kp N0            &kp N4                                                                                                    &kp N7  &kp N6        &kp N5        &kp N9       &kp N8       &none
+&kp MINUS  &kp Q        &kp H          &kp O             &kp U             &kp DOT                                                                                                   &kp G   &kp D         &kp L         &kp F        &kp B        &none
+&kp ESC    &hml LALT Y  &hml LGUI I    &hml LCTRL E      &hml LSHFT A      &kp COMMA                                                                                                 &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
+&none      &hml LGUI J  &hml LALT SQT  &hml LSHFT SLASH  &hml LCTRL UNDER  &kp X      &kp RCTRL            &sl LAYER_LEFT  &to LAYER_GAMING    &none  &none     &kp RET              &kp V   &kp K         &kp C         &kp P        &kp Z        &none
+&none      &none        &none          &sl LAYER_FN      &sl LAYER_SYSTEM             &lt LAYER_NAV SPACE  &smart_shift    &kp DEL             &none  &kp BSPC  &lt LAYER_SYMBOLS T          &none         &none         &none        &none        &none
             >;
         };
 
@@ -142,7 +142,7 @@
 &none    &kp N8       &kp N9       &kp N5        &kp N6            &kp N7                                                                          &none  &none  &none  &none  &none  &none
 &none    &kp B        &kp F        &kp L         &kp D             &kp G                                                                           &none  &none  &none  &none  &none  &none
 &kp TAB  &hml LALT W  &hml LGUI N  &hml LCTRL R  &hml LSHFT S      &kp M                                                                           &none  &none  &none  &none  &none  &none
-&none    &hml LALT Z  &hml LGUI P  &hml LCTRL C  &hml LSHFT K      &kp V  &kp RET          &trans         &to LAYER_GAMING    &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none    &hml LGUI Z  &hml LALT P  &hml LSHFT C  &hml LCTRL K      &kp V  &kp RET          &trans         &to LAYER_GAMING    &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none    &none        &none        &sl LAYER_FN  &sl LAYER_SYSTEM         &lt LAYER_NAV T  &smart_shift   &kp BSPC            &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
