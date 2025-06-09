@@ -194,12 +194,12 @@
 
         layer_fn {
             bindings = <
-&trans  &trans  &trans  &trans   &trans                                                                     &trans     &trans     &trans    &trans    &trans
-&trans  &kp F3  &kp F2  &kp F1   &kp F10  &kp F4                                                    &kp F7  &kp F6     &kp F5     &kp F9    &kp F8    &trans
-&trans  &trans  &trans  &kp F12  &kp F11  &trans                                                    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp F3  &kp F2  &kp F1   &kp F10  &kp F4                                                    &trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans
-&trans  &kp F8  &kp F9  &kp F5   &kp F6   &kp F7  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &trans  &trans  &trans   &trans           &trans  &trans  &trans    &trans  &trans  &trans          &trans     &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans   &trans                                                                         &trans     &trans     &trans    &trans    &trans
+&trans  &kp F3  &kp F2  &kp F1   &kp F10  &kp F4                                                        &kp F7  &kp F6     &kp F5     &kp F9    &kp F8    &trans
+&trans  &trans  &trans  &kp F12  &kp F11  &kp INSERT                                                    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F3  &kp F2  &kp F1   &kp F10  &kp F4                                                        &trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans
+&trans  &kp F8  &kp F9  &kp F5   &kp F6   &kp F7      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans   &trans               &trans  &trans  &trans    &trans  &trans  &trans          &trans     &trans     &trans    &trans    &trans
             >;
         };
 
