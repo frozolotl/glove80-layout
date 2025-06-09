@@ -5,6 +5,7 @@ This is [frozolotl](https://github.com/frozolotl)'s layout for the [Glove80](htt
 - Good for German and especially English.
 - Easily accessible symbols optimized for programming.
 - Games should be playable without much configuration.
+- Mostly one-handed use with creative software like Blender.
 - Home-row mods without much finagling.
 - Long-term efficiency is prioritized over being easy to learn.
 
