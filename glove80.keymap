@@ -11,9 +11,10 @@
 #define LAYER_NAV 4
 #define LAYER_SYSTEM 5
 #define LAYER_FN 6
-#define LAYER_GAMING_MESSAGE 7
-#define LAYER_GAMING_MESSAGE_NAV 8
-#define LAYER_MAGIC 9
+#define LAYER_KP 7
+#define LAYER_GAMING_MESSAGE 8
+#define LAYER_GAMING_MESSAGE_NAV 9
+#define LAYER_MAGIC 10
 
 #define KEYS_LEFT_AND_THUMB <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 56 57 58 59 60 61 62 63 74 75 76 77 78 79 55 72 73 69 70 71 54 53 52>
 #define KEYS_RIGHT_AND_THUMB <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71 55 56 57 74 73 72>
@@ -132,18 +133,18 @@
 &kp MINUS  &kp Q        &kp H          &kp O             &kp U             &kp DOT                                                                                                   &kp G   &kp D         &kp L         &kp F        &kp B        &none
 &kp ESC    &hml LALT Y  &hml LGUI I    &hml LCTRL E      &hml LSHFT A      &kp COMMA                                                                                                 &kp M   &hmr LSHFT S  &hmr LCTRL R  &hmr LGUI N  &hmr LALT W  &kp TAB
 &none      &hml LGUI J  &hml LALT SQT  &hml LSHFT SLASH  &hml LCTRL UNDER  &kp X      &kp RCTRL            &sl LAYER_LEFT  &to LAYER_GAMING    &none  &none     &kp RET              &kp V   &kp K         &kp C         &kp P        &kp Z        &none
-&none      &none        &none          &sl LAYER_FN      &sl LAYER_SYSTEM             &lt LAYER_NAV SPACE  &smart_shift    &kp DEL             &none  &kp BSPC  &lt LAYER_SYMBOLS T          &none         &none         &none        &none        &none
+&none      &none        &sl LAYER_KP   &sl LAYER_FN      &sl LAYER_SYSTEM             &lt LAYER_NAV SPACE  &smart_shift    &kp DEL             &none  &kp BSPC  &lt LAYER_SYMBOLS T          &none         &none         &none        &none        &none
             >;
         };
 
         layer_left {
             bindings = <
-&none    &none        &none        &none         &none                                                                                                    &none  &none  &none  &none  &none
-&none    &kp N8       &kp N9       &kp N5        &kp N6            &kp N7                                                                          &none  &none  &none  &none  &none  &none
-&none    &kp B        &kp F        &kp L         &kp D             &kp G                                                                           &none  &none  &none  &none  &none  &none
-&kp TAB  &hml LALT W  &hml LGUI N  &hml LCTRL R  &hml LSHFT S      &kp M                                                                           &none  &none  &none  &none  &none  &none
-&none    &hml LGUI Z  &hml LALT P  &hml LSHFT C  &hml LCTRL K      &kp V  &kp RET          &trans         &to LAYER_GAMING    &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none    &none        &none        &sl LAYER_FN  &sl LAYER_SYSTEM         &lt LAYER_NAV T  &smart_shift   &kp BSPC            &none  &none  &none         &none  &none  &none  &none  &none
+&none    &none        &none         &none         &none                                                                                                    &none  &none  &none  &none  &none
+&none    &kp N8       &kp N9        &kp N5        &kp N6            &kp N7                                                                          &none  &none  &none  &none  &none  &none
+&none    &kp B        &kp F         &kp L         &kp D             &kp G                                                                           &none  &none  &none  &none  &none  &none
+&kp TAB  &hml LALT W  &hml LGUI N   &hml LCTRL R  &hml LSHFT S      &kp M                                                                           &none  &none  &none  &none  &none  &none
+&none    &hml LGUI Z  &hml LALT P   &hml LSHFT C  &hml LCTRL K      &kp V  &kp RET          &trans         &to LAYER_GAMING    &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none    &none        &sl LAYER_KP  &sl LAYER_FN  &sl LAYER_SYSTEM         &lt LAYER_NAV T  &smart_shift   &kp BSPC            &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
@@ -194,11 +195,22 @@
         layer_fn {
             bindings = <
 &trans  &trans  &trans  &trans   &trans                                                                     &trans     &trans     &trans    &trans    &trans
-&trans  &trans  &trans  &trans   &trans   &trans                                                    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F3  &kp F2  &kp F1   &kp F10  &kp F4                                                    &kp F7  &kp F6     &kp F5     &kp F9    &kp F8    &trans
 &trans  &trans  &trans  &kp F12  &kp F11  &trans                                                    &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp F3  &kp F2  &kp F1   &kp F10  &kp F4                                                    &trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans
-&trans  &kp F7  &kp F6  &kp F5   &kp F9   &kp F8  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F8  &kp F9  &kp F5   &kp F6   &kp F7  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &trans  &trans  &trans   &trans           &trans  &trans  &trans    &trans  &trans  &trans          &trans     &trans     &trans    &trans    &trans
+            >;
+        };
+
+        layer_kp {
+            bindings = <
+&trans  &trans         &trans           &trans        &trans                                                                                &trans     &trans     &trans     &trans     &trans
+&trans  &kp KP_N3      &kp KP_N2        &kp KP_N1     &kp KP_N0     &kp KP_N4                                                    &kp KP_N7  &kp KP_N6  &kp KP_N5  &kp KP_N9  &kp KP_N8  &trans
+&trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp KP_PLUS   &kp KP_DOT                                                   &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &kp KP_N3      &kp KP_N2        &kp KP_N1     &kp KP_N0     &kp KP_N4                                                    &trans     &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT   &trans
+&trans  &kp KP_N8      &kp KP_N9        &kp KP_N5     &kp KP_N6     &kp KP_N7  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &trans         &trans           &trans        &trans                   &trans  &trans  &trans    &trans  &trans  &trans             &trans     &trans     &trans     &trans     &trans
             >;
         };
 
